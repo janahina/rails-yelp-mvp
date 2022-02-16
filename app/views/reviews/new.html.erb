@@ -1,0 +1,8 @@
+<div class="container mt-5">
+  <%= simple_form_for [ @restaurant, @review ] do |f| %>
+  <%# POST   /restaurants/:restaurant_id/reviews %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection: [5, 4, 3, 2, 1, 0], include_blank: false %>
+  <%= f.submit "Submit Review", class: "btn btn-primary" %>
+  <% end %>
+</div>
